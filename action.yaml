@@ -1,0 +1,29 @@
+name: 'Test GH Action for SQ GitHub AutoConfig'
+description: 'Custom Action for Configuring GitHub Integration with SonarQube'
+
+inputs:
+  token:
+    description: 'User Token for SonarQube'
+    required: true
+  sonar-url:
+    description: 'SonarQube URL'
+    required: true
+  project-key:
+    description: 'Project Key'
+    required: true
+  repo-name:
+    description: 'Repository Name'
+    required: true
+  devops-integration-name:
+    description: 'DevOps Integration Name'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.sonar-url }}
+    - ${{ inputs.project-key }}
+    - ${{ inputs.repo-name }}
+    - ${{ inputs.devops-integration-name }}
