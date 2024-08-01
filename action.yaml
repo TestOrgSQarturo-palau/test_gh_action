@@ -1,5 +1,7 @@
 name: 'Test GH Action for SQ GitHub AutoConfig'
 description: 'Custom Action for Configuring GitHub Integration with SonarQube'
+Icon: arrow-down-circle
+Color: purple
 
 inputs:
   token:
