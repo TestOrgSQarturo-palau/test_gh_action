@@ -1,9 +1,9 @@
 #!/bin/bash
 
-command="echo Hello from bashland!!"
+command="echo Checking current status of project in SonarQube"
+response=$(curl -u ${{ $1 }}: -X GET '${{ $2 }}api/alm_settings/get_binding?project=${{ $3 }}')
+echo "response=$response" >> $GITHUB_ENV
+echo "response=$response"
 
-if [ -n "$1" ];then
-  command="echo Hello $1!!"
-fi
 
 eval $command
