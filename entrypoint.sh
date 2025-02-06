@@ -16,6 +16,10 @@ SONAR_TOKEN=$1
 SONAR_HOST_URL=$2
 PROJECT_KEY=$3
 
+echo $SONAR_TOKEN
+echo $SONAR_HOST_URL
+echo $PROJECT_KEY
+
 # Command to check the current status of the project in SonarQube
 command="echo Checking current status of project in SonarQube"
 eval $command
