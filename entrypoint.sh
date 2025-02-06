@@ -22,7 +22,7 @@ eval $command
 
 # Make the API call to SonarQube
 response=$(curl -u $SONAR_TOKEN: -X GET "$SONAR_HOST_URL/api/alm_settings/get_binding?project=$PROJECT_KEY")
-
+echo "response=$response" 
 # Save the response to a file
 echo "response=$response" > value.txt
 
