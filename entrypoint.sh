@@ -6,6 +6,12 @@
 #  exit 1
 #fi
 
+# Check if curl is installed
+if ! command -v curl &> /dev/null; then
+  echo "curl could not be found, installing..."
+  sudo apt-get update && sudo apt-get install -y curl
+fi
+
 SONAR_TOKEN=$1
 SONAR_HOST_URL=$2
 PROJECT_KEY=$3
