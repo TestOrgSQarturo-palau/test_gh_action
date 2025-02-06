@@ -16,16 +16,10 @@ SONAR_TOKEN=$1
 SONAR_HOST_URL=$2
 PROJECT_KEY=$3
 
-echo $SONAR_TOKEN
-echo $SONAR_HOST_URL
-echo $PROJECT_KEY
-
-# Command to check the current status of the project in SonarQube
-command="echo Checking current status of project in SonarQube"
-eval $command
+echo "Sonar Host URL being used: $SONAR_HOST_URL"
+echo "Project Key being used: $PROJECT_KEY"
 
 # Make the API call to SonarQube
-echo "u $SONAR_TOKEN: -X GET $SONAR_HOST_URL/api/alm_settings/get_binding?project=$PROJECT_KEY"
 response=$(curl -u $SONAR_TOKEN: -X GET "$SONAR_HOST_URL/api/alm_settings/get_binding?project=$PROJECT_KEY")
 echo "response=$response" 
 # Save the response to a file
