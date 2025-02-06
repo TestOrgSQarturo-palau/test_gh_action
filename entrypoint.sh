@@ -25,6 +25,7 @@ command="echo Checking current status of project in SonarQube"
 eval $command
 
 # Make the API call to SonarQube
+echo "u $SONAR_TOKEN: -X GET $SONAR_HOST_URL/api/alm_settings/get_binding?project=$PROJECT_KEY"
 response=$(curl -u $SONAR_TOKEN: -X GET "$SONAR_HOST_URL/api/alm_settings/get_binding?project=$PROJECT_KEY")
 echo "response=$response" 
 # Save the response to a file
