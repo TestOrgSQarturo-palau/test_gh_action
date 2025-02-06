@@ -9,7 +9,7 @@
 # Check if curl is installed
 if ! command -v curl &> /dev/null; then
   echo "curl could not be found, installing..."
-  apt-get update && sudo apt-get install -y curl
+  apt-get update && apt-get install -y curl
 fi
 
 SONAR_TOKEN=$1
