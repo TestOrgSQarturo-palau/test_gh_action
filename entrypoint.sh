@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Check if the required arguments are provided
-if [ "$#" -ne 3 ]; then
-  echo "Usage: $0 <SONAR_TOKEN> <SONAR_HOST_URL> <PROJECT_KEY>"
-  exit 1
-fi
+#if [ "$#" -ne 3 ]; then
+#  echo "Usage: $0 <SONAR_TOKEN> <SONAR_HOST_URL> <PROJECT_KEY>"
+#  exit 1
+#fi
 
 SONAR_TOKEN=$1
 SONAR_HOST_URL=$2
