@@ -1,17 +1,5 @@
 #!/bin/bash
 
-# Check if the required arguments are provided
-#if [ "$#" -ne 3 ]; then
-#  echo "Usage: $0 <SONAR_TOKEN> <SONAR_HOST_URL> <PROJECT_KEY>"
-#  exit 1
-#fi
-
-# Check if curl is installed
-#if ! command -v curl &> /dev/null; then
-#  echo "curl could not be found, installing..."
-#  apt-get update && apt-get install -y curl
-#fi
-
 SONAR_TOKEN=$1
 SONAR_HOST_URL=$2
 PROJECT_KEY=$3
