@@ -33,7 +33,7 @@ echo "VALUE_FILE=value.txt" >> $GITHUB_ENV
 case $response in
     *"is not bound to any DevOps Platform"*)
     echo "The condition was met, adding the alm binding."
-    curl -u ${{ secrets.SONAR_USER_TOKEN }}: -X POST "$SONAR_HOST_URL/api/alm_settings/set_github_binding?almSetting=$SQ_DEVOPS_INTEGRATION_NAME&monorepo=false&project=$PROJECT_KEY&repository=$REPO_KEY"
+    curl -u $SONAR_TOKEN: -X POST "$SONAR_HOST_URL/api/alm_settings/set_github_binding?almSetting=$SQ_DEVOPS_INTEGRATION_NAME&monorepo=false&project=$PROJECT_KEY&repository=$REPO_KEY"
       ;;
     *)
       echo "The condition was not met, so the task was not executed."
