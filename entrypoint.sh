@@ -14,11 +14,6 @@ echo "SonarQube DevOps Integration Name: $SQ_DEVOPS_INTEGRATION_NAME"
 # Make the API call to SonarQube
 response=$(curl -u $SONAR_TOKEN: -X GET "$SONAR_HOST_URL/api/alm_settings/get_binding?project=$PROJECT_KEY")
 echo "response=$response" 
-# Save the response to a file
-echo "response=$response" > value.txt
-
-# Set the file path as an environment variable
-echo "VALUE_FILE=value.txt" >> $GITHUB_ENV
 
 case $response in
     *"is not bound to any DevOps Platform"*)
