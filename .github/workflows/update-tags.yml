@@ -11,8 +11,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.PAT_TOKEN }}
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
       # ... your build and upload artifact steps ...
 
       - name: Update v4 tag
