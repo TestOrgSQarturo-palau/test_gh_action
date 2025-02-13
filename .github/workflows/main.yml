@@ -21,6 +21,10 @@ jobs:
         id: version
         with:
           version: ${{ github.ref_name }}
+        run: |
+          echo "${{ steps.version.outputs.release }}"           # 1.2.3
+          echo "${{ steps.version.outputs.major }}"             # 1
+          echo "${{ steps.version.outputs.minor }}"             # 2
 
       - name: Update tags
         run: |
