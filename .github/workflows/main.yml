@@ -22,7 +22,7 @@ jobs:
         with:
           #version: ${{ github.ref_name }}
               # A version to work with
-          version: 1.2.3
+          version: 5.2
 
           # A version to compare against
           #compare-to: 2.1.0
