@@ -24,7 +24,7 @@ jobs:
               # A version to work with
           version: 5.2.0
           satisfies: '5.x'
-          compare-to: 5
+          #compare-to: 5
 
           # A version to compare against
           #compare-to: 2.1.0
