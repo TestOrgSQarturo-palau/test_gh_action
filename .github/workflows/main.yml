@@ -25,7 +25,7 @@ jobs:
           version: 1.2.3+42.24
 
           # A version to compare against
-          compare-to: 2.1.0
+          #compare-to: 2.1.0
 
           # A range to check against
           satisfies: 1.x
