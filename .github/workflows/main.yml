@@ -23,14 +23,6 @@ jobs:
           #version: ${{ github.ref_name }}
               # A version to work with
           version: 5.2.0
-          #satisfies: '5.x'
-          #compare-to: 5
-
-          # A version to compare against
-          #compare-to: 2.1.0
-
-          # A range to check against
-          #satisfies: ''
       
       - run: |
           echo "${{ steps.version.outputs.release }}"           # 1.2.3
@@ -45,7 +37,7 @@ jobs:
           
           for t in $TAGS; do
             echo $t
-            #git tag -f "$t"
-            #git push origin ":$t" 2>/dev/null || true
-            #git push origin "$t"
+            git tag -f "$t"
+            git push origin ":$t" 2>/dev/null || true
+            git push origin "$t"
           done
