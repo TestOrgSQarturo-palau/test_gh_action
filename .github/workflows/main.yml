@@ -22,8 +22,8 @@ jobs:
         with:
           #version: ${{ github.ref_name }}
               # A version to work with
-          version: 5.2
-          satisfies: ''
+          version: 5.2.0
+          satisfies: '5.x'
           compare-to: 5
 
           # A version to compare against
