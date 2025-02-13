@@ -28,7 +28,7 @@ jobs:
           #compare-to: 2.1.0
 
           # A range to check against
-          satisfies: 5.x
+          satisfies: ''
       
       - run: |
           echo "${{ steps.version.outputs.release }}"           # 1.2.3
