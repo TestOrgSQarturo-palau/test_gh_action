@@ -6,6 +6,8 @@ PROJECT_KEY=$3
 REPO_KEY=$4
 SQ_DEVOPS_INTEGRATION_NAME=$5
 
+echo "Starting process for binding your repo to SonarQube project"
+
 echo "Sonar Host URL being used: $SONAR_HOST_URL"
 echo "Project Key being used: $PROJECT_KEY"
 echo "Repository Key used: $REPO_KEY"
