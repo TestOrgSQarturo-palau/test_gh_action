@@ -13,7 +13,7 @@ jobs:
 
       - name: Update v4 tag
         run: |
-          #git config --global user.name 'github-actions[bot]'
+          git config --global user.name 'arturo-palau-sonarsource'
           #git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git tag -f v5 ${{ github.event.release.tag_name }}  # Force-update v5
           git push origin v5 --force                             # Force-push the updated v5 tag
