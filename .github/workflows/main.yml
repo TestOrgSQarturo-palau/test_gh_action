@@ -23,12 +23,14 @@ jobs:
           #version: ${{ github.ref_name }}
               # A version to work with
           version: 5.2
+          satisfies: ''
+          compare-to: 5
 
           # A version to compare against
           #compare-to: 2.1.0
 
           # A range to check against
-          satisfies: ''
+          #satisfies: ''
       
       - run: |
           echo "${{ steps.version.outputs.release }}"           # 1.2.3
