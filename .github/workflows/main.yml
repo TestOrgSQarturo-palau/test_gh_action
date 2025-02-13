@@ -26,6 +26,8 @@ jobs:
         run: |
           TAGS='v${{ steps.version.outputs.major }} v${{ steps.version.outputs.major }}.${{ steps.version.outputs.minor }}'
 
+          echo ${{ github.ref_name }}
+          
           for t in $TAGS; do
             echo $t
             #git tag -f "$t"
