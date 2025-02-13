@@ -20,7 +20,8 @@ jobs:
         uses: madhead/semver-utils@latest
         id: version
         with:
-          version: '${{ github.ref_name }}'
+          #version: ${{ github.ref_name }}
+          version: 5.2
       
       - run: |
           echo "${{ steps.version.outputs.release }}"           # 1.2.3
